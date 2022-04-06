@@ -27,7 +27,9 @@ const App = () =>{
                         <h3>{nomes.medico1}</h3>
                     </div>
                     <div className="right">
-                        <img /*src={process.env.PUBLIC_URL + '../public/medico2.jpg'}*//>
+                        
+                    <img src={process.env.PUBLIC_URL + '/medico2.jpg'} />
+
                     </div>
                         <h3>{nomes.medico2}</h3>
                     <div className="middle" >
