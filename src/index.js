@@ -1,25 +1,40 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import ReactDOM from "react-dom"
-import  './styles.css'
+//import Img from 'react-image'
+import './styles.css'
+//import med1 from './images/medico1.jpg'
 
 const App = () =>{
-    const div1 = {margin: 'auto', width: 800, height: 200, backgroundColor: '#EEE', padding: 100,
+    const div1 = {margin: 'auto', width: 900, height: 200, backgroundColor: '#EEE', padding: 100,
     borderRadius: 8, }
+    const nomes={
+        medico1: 'José da Silva',
+        medico2: 'Maria da Silva',
+        medico3: 'Jaqueline Mendes'
+    }
        return( 
        <div style={div1}>
-                <h3 className="rotulo" htmlFor="nome" style={{display: 'block', 
+                <p className="rotulo" htmlFor="nome" style={{display: 'block', 
                     marginBottom:10, textAlign: 'center', 
-                    justifyContent: 'center'}}>Profissionais de Saúde:</h3>
+                    justifyContent: 'center'}}>Profissionais de Saúde:</p>
                     
-                <div style={{margin: 'auto',height:20, width: 600, backgroundColor: 'black', padding: 100,
+                <div style={{margin: 'auto',height:20, width: 700, backgroundColor: 'black', padding: 100,
             borderRadius: 8}}>
 
-                    <div className="div3" style={{margin: 'auto',height:20, width: 50, backgroundColor: 'yellow', padding: 50,
-            borderRadius: 8, float: 'left'}}></div>
-             <      div className="div3" style={{margin: 'auto',height:20, width: 50, backgroundColor: 'green', padding: 50,
-            borderRadius: 8,  }}></div>
-                    <div className="div3" style={{margin: 'auto',height:20, width: 50, backgroundColor: 'green', padding: 50,
-            borderRadius: 8, float: 'right' }}></div>
+                    <div className="left"  >
+                        <img /*src={med1}*//>  
+                        <h3>{nomes.medico1}</h3>
+                    </div>
+                    <div className="right">
+                        <img /*src={process.env.PUBLIC_URL + '../public/medico2.jpg'}*//>
+                    </div>
+                        <h3>{nomes.medico2}</h3>
+                    <div className="middle" >
+                        <img /*src={"https://images.pexels.com/photos/7659690/pexels-photo-7659690.jpeg?cs=srgb&dl=pexels-thirdman-7659690.jpg&fm=jpg"}*//>
+                        <h3>{nomes.medico3}</h3>
+                    </div>
+                    
                 </div>            
         </div>
     )
